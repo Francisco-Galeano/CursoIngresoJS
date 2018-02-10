@@ -1,5 +1,14 @@
 function Mostrar()
 {
+	var edad;
+
+	edad = document.getElementById('edad').value;
+
+	if (edad == "15"){
+
+		alert("La niña es muy bonita");
+
+	}
 //tomo la edad  
 
 

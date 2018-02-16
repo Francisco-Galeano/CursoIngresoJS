@@ -12,20 +12,18 @@ function Mostrar()
 		alert("Excelente!");
 
 	}
-
 	else{
 
-		if(notaExamen < 9 && notaExamen > 4){
+		if(notaExamen > 3){
 
 			alert("Aprobado.")
 		}
-
 		else{
 
 			alert("Vamos, la proxima se puede.")
 
 		}
-		
+
 	}
 
 

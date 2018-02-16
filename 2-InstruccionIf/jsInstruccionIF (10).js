@@ -4,23 +4,23 @@ function Mostrar()
 	var notaExamen;
 	//var notaFinal;
 
-	notaExamen = Math.random()*10;
+	notaExamen = Math.round(Math.random()*10);
 	//notaFinal = Math.round(notaExamen);
 
 	if(notaExamen > 8){
 
-		alert("Excelente!");
+		alert("Excelente! Su nota es " + notaExamen + "." );
 
 	}
 	else{
 
 		if(notaExamen > 3){
 
-			alert("Aprobado.")
+			alert("Aprobado. Su nota es " + notaExamen + "." );
 		}
 		else{
 
-			alert("Vamos, la proxima se puede.")
+			alert("Vamos, la proxima se puede. Su nota es " + notaExamen + "." );
 
 		}
 

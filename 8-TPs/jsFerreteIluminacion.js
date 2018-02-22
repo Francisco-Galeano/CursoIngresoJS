@@ -13,26 +13,105 @@ function CalcularPrecio ()
  	
  	var cantidadLamparas;
  	var precioLamparas;
- 	var porSeis;
- 	var porCinco;
- 	var porCuatro;
- 	var porTres;
+ 	var marcaLamparas;
+ 	//var importe;
  	var importeFinal;
 
- 	cantidadLamparas = document.getElementById('Cantidad').value;
- 	document.getElementById('precioDescuento').value = importeFinal;
- 	//porSeis = (precioLamparas*6)*0.5;
+ 	
+ 	cantidadLamparas = document.getElementById("Cantidad").value;
+ 	cantidadLamparas = parseInt(cantidadLamparas);
  	precioLamparas = 35;
+ 	precioLamparas = parseInt(precioLamparas);
+ 	//importe = parseInt(importe);
+ 	//importeFinal = cantidadLamparas*precioLamparas;
+ 	marcaLamparas = document.getElementById("Marca").value;
+ 	importeFinal = parseInt(importeFinal);
+ 	document.getElementById("precioDescuento").value = importeFinal;	
 
-if(cantidadLamparas > 5){
+ 	
+ 	if(cantidadLamparas > 5){
 
-	importeFinal = parseInt((cantidadLamparas*precioLamparas)*0.5);
+		importeFinal = (cantidadLamparas*precioLamparas)*0.50;
+		importeFinal = parseInt(importeFinal);
+		document.getElementById("precioDescuento").value = importeFinal;
 
-}
+	}
 	else{
 
-		importeFinal = cantidadLamparas*precioLamparas;
+		if(cantidadLamparas == 5 && marcaLamparas == "ArgentinaLuz"){
 
-	}	
+ 				importeFinal = (cantidadLamparas*precioLamparas)*0.60;
+ 				importeFinal = parseInt(importeFinal);
+ 				document.getElementById("precioDescuento").value = importeFinal;
 
-}
+ 			}
+ 			else{
+
+ 				if(cantidadLamparas == 5 && marcaLamparas != "ArgentinaLuz"){
+
+ 					importeFinal = (cantidadLamparas*precioLamparas)*0.70;
+ 					importeFinal = parseInt(importeFinal);
+ 					document.getElementById("precioDescuento").value = importeFinal;
+
+ 				}
+ 				else{
+
+ 					if(cantidadLamparas == 4 && marcaLamparas == "ArgentinaLuz" || marcaLamparas == "FelipeLamparas"){
+
+ 						importeFinal = (cantidadLamparas*precioLamparas)*0.75;
+ 						importeFinal = parseInt(importeFinal);
+ 						document.getElementById("precioDescuento").value = importeFinal;
+
+ 					}
+ 					else{
+
+ 						if(cantidadLamparas == 4 && marcaLamparas != "ArgentinaLuz" || marcaLamparas != "FelipeLamparas"){
+
+ 							importeFinal = (cantidadLamparas*precioLamparas)*0.80;
+ 							importeFinal = parseInt(importeFinal);
+ 							document.getElementById("precioDescuento").value = importeFinal;
+
+ 						}
+ 						else{
+
+ 							if(cantidadLamparas == 3 && marcaLamparas == "ArgentinaLuz"){
+
+ 								importeFinal = (cantidadLamparas*precioLamparas)*0.85;
+ 								importeFinal = parseInt(importeFinal);
+ 								document.getElementById("precioDescuento").value = importeFinal;
+
+ 							}
+ 							else{
+
+ 								if(cantidadLamparas == 3 && marcaLamparas == "FelipeLamparas"){
+
+ 									importeFinal = (cantidadLamparas*precioLamparas)*0.90;
+ 									importeFinal = parseInt(importeFinal);
+ 									document.getElementById("precioDescuento").value = importeFinal;
+
+ 								}
+ 								else{
+
+ 									if(cantidadLamparas == 3 && marcaLamparas != "ArgentinaLuz" || marcaLamparas != "FelipeLamparas"){
+
+ 									importeFinal = (cantidadLamparas*precioLamparas)*0.95;
+ 									importeFinal = parseInt(importeFinal);
+ 									document.getElementById("precioDescuento").value = importeFinal;
+
+ 								}
+ 							
+ 							}
+
+ 						}
+
+ 					}
+
+ 				}
+
+ 			}
+
+ 		}
+
+ 	}
+
+ }

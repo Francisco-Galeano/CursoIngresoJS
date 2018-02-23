@@ -6,15 +6,15 @@ function Mostrar()
 	var acumulador=0;
 	var respuesta="si";
 
-		while(respuesta == "si"){
+	while(respuesta == "si"){
 
-			contador = contador + 1;
-			numero = prompt("Ingrese un número");
-			numero = parseInt(numero);
-			respuesta = prompt("Para continuar escriba si");
-			acumulador = acumulador + numero;
+		contador = contador + 1;
+		numero = prompt("Ingrese un número");
+		numero = parseInt(numero);
+		respuesta = prompt("Para continuar escriba si");
+		acumulador = acumulador + numero;
 
-		}
+	}
 
 		
 
